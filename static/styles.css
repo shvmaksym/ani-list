@@ -1,0 +1,340 @@
+.card {
+    justify-content: center;
+    border-radius: 5px;
+    padding: 25px;
+    margin-top: 35px;
+    margin-left: 50px;
+    padding-top: 45px;
+    width: 20%;
+    display: inline-block;
+    background-color: rgba(36, 35, 35, 0);
+    border-color: rgba(36, 35, 35, 0);
+}
+.card-link {
+    text-decoration: none;
+}
+.img_anime {
+    width: 225px;
+    height: 325px;
+    object-fit: cover;
+}
+.popular_head {
+    justify-content: center;
+    font-family: 'Karantina', sans-serif;
+    font-size: 54px;
+    letter-spacing: 7px;
+    color: #C2B7EF;
+    display: flex;
+    margin-left: 190px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 60px;
+    max-width: 70%;
+    height: 100px;
+}
+body {
+    background-image: url('/static/backgrounds/background.png');
+    background-size: 100%;
+    background-color: #C2B7EF;
+    background-attachment: fixed;
+    background-position: center center;
+    max-width: 100%;
+}
+.favorites_head {
+    justify-content: center;
+    font-family: 'Karantina', sans-serif;
+    font-size: 54px;
+    letter-spacing: 7px;
+    color: #C2B7EF;
+    display: flex;
+    margin-left: 120px;
+    margin-top: 20px;
+    padding-top: 20px;
+    max-width: 70%;
+    height: 100px;
+}
+.reg_form {
+    padding: 200px;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: #644FB6;
+    max-width: 70%;
+    height: 100px;
+    margin: 0 auto;
+    align-items: center;
+}
+.navbar-brand {
+    font-family: 'Karantina', sans-serif;
+    font-size: 54px;
+    margin-left: 150px;
+    letter-spacing: 7px;
+    color: #C2B7EF;
+}
+.custom-paragraph {
+    font-family: 'Karatina', sans-serif;
+    padding-top: 12px;
+    color: white;
+    font-size: 25px;
+}
+.navbar.fixed-top {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+.poster_name {
+    position: absolute;
+    transform: translate(70%, -160%);
+    font-family: 'Karantina', sans-serif;
+    font-size: 180px;
+    letter-spacing: 15px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+}
+.season {
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    font-family: 'Karantina', sans-serif;
+    font-size: 60px;
+    letter-spacing: 5px;
+    color: white;
+    background-color: rgba(100, 79, 182);
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.nav-link {
+    font-family: 'Karantina', sans-serif;
+    color: #C2B7EF;
+    background-color: rgba(0,0,0,0);
+    font-size: 36px;
+    padding-left: 15px;
+    padding-right: 15px;
+    letter-spacing: 3px;
+    transition: color 0.3s;
+}
+.navbar-brand:hover {
+    color: white;
+  }
+.nav-link:hover {
+    color: white;
+  }
+.login {
+    font-family: 'Karantina', sans-serif;
+    color: #644FB6;
+    background-color: white;
+    font-size: 36px;
+    padding-left: 15px;
+    padding-right: 15px;
+    letter-spacing: 3px;
+}
+.login_form {
+    padding: 500px;
+}
+.login_box {
+    font-family: 'Karantina', sans-serif;
+    letter-spacing: 1px;
+    font-size: 36px;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    width: 500px;
+    height: 550px;
+    background: #644FB6;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-primary {
+    letter-spacing: 1px;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    margin: 15px 25px;
+    cursor: pointer;
+}
+.btn_favorite {
+    position: absolute;
+    margin-top: 0%;
+    top: 10px;
+    right: -20px;
+    width: 50px;
+    height: 40px;
+    border: 0px;
+    background: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    z-index: 1;
+}
+.login_text_reg {
+    padding-left: 25%;
+}
+.login_text {
+    letter-spacing: 3px;
+    font-size: 56px;
+    color: white;
+    padding-left: 35%;
+}
+.input_box {
+    letter-spacing: 1px;
+    color: #644FB6;
+    left: 5%;
+    position: relative;
+    width: 300px;
+    margin: 30px 0;
+    padding: 3px;
+    border-bottom: 2px;
+}
+.input_box input:focus~label,
+.input_box input:valid~label {
+    color: black;
+    top: -15px;
+}
+
+.input_box label {
+    letter-spacing: 1px;
+    color: #C2B7EF;
+    left: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.input_box input {
+    width: 115%;
+    height: 50px;
+    padding: 16px;
+    left: 20px;
+}
+.login_box .btn-primary {
+    color: #644FB6;
+    background: #C2B7EF;
+    font-size: 36px;
+    width: 100%;
+    height: 70px;
+    border-radius: 16px;
+    margin: 15px 0 15px;
+    display: inline-block;
+    text-align: center;
+    line-height: 36px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.reg_link {
+    letter-spacing: 1px;
+    color: #C2B7EF;
+}
+.register_link {
+    letter-spacing: 1px;
+    color: white;
+    margin: 25px 25px;
+    padding: 3px;
+}
+.poster {
+    border: 2px solid #000;
+    max-width: 70%;
+    height: 900px;
+    margin-left: 15%;
+    position: relative;
+    display: flex;
+}
+.poster img {
+    width: 100%;
+    height: auto;
+}
+.info_head {
+    font-family: 'Karantina', sans-serif;
+    font-size: 54px;
+    letter-spacing: 7px;
+    color: #644FB6;
+    padding-top: 3%;
+    padding-left: 35%;
+    padding-bottom: 10%;
+}
+.info_comm {
+    font-family: 'Karantina', sans-serif;
+    font-size: 54px;
+    letter-spacing: 7px;
+    color: #644FB6;
+    padding-left: 35%;
+    padding-bottom: 6%;
+}
+.info_p {
+    font-family: 'Karantina', sans-serif;
+    padding-left: 45px;
+    padding-bottom: 20px;
+    letter-spacing: 1px;
+    font-size: 36px;
+}
+.info_synopsis {
+    font-family: 'Karantina', sans-serif;
+    padding-top:10%;
+    letter-spacing: 1px;
+    font-size: 24px;
+}
+.info_poster {
+    position: relative;
+    display: flex;
+    left: 66%;
+    transform: translate(20%, -225%);
+}
+.comment-section {
+    margin-top: 20px;
+}
+
+.comment-section textarea, .comment-section button {
+    display: block;
+    font-size: 18px;
+    letter-spacing: 1px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.comment-section button {
+    font-family: 'Karantina', sans-serif;
+    padding: 10px;
+    background-color: #644FB6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 3px;
+    font-size: 24px;
+}
+
+.comment-section button:hover {
+    background-color: #005F6B;
+}
+.comments {
+
+}
+.container_info {
+    margin-left: 15%;
+    max-width: 70%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 10%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: white;
+    border: 1px;
+}
+.container {
+    max-width: 70%;
+    background: rgba(36, 35, 35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+.hidden-card {
+    display: none;
+}

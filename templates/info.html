@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <div>
+        <h1 class="info_head">Anime Info</h1>
+        <p class="info_p">Title: {{ anime_data.title }}</p>
+        <p class="info_p">Ranking: {{ anime_data.ranking }}</p>
+        <p class="info_p">Episodes: {{ anime_data.episodes }}</p>
+        <p class="info_p">Status: {{ anime_data.status }}</p>
+        <p class="info_synopsis">Synopsis: {{ anime_data.synopsis }}</p>
+        <img class="info_poster" src="{{ anime_data.image }}" alt="Anime Poster">
+        <div class="comments">
+            <h2 class="info_head">Comments</h2>
+            <ul id="commentList">
+                {% for comment in comments %}
+                    <li id="comment-{{ comment.id }}">
+                        <p class="info_p">User: <strong>{{ comment.username }}</strong></p>
+                        <p class="info_p">{{ comment.comment }}</p>
+                        <p class="info_p">Date: {{ comment.timestamp }}</p>
+                        {% if comment.username == session["username"] %}
+                            <button data-comment-id="{{ comment.id }}" data-anime-id="{{ anime_data.id }}" onclick="deleteComment({{ comment.id }}, {{ anime_data.id }})">Delete Comment</button>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% if session["user_id"] %}
+            <div class="comment-section">
+                <h2 class="info_comm">Add a Comment</h2>
+                <form id="commentForm" onsubmit="addComment(event, {{ anime_data.id }})">
+                    <textarea name="comment" placeholder="Enter your comment"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        {% endif %}
+{% endblock %}
+

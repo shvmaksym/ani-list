@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h1 class="favorites_head" >Favorites</h1>
+    <div class="row">
+            {% for anime in favorite_anime %}
+              <div class="card">
+                    <a href="{{ url_for('show_info', anime_id=anime.id) }}" class="card-link">
+                        <div class="image-container">
+                            <img class="img-poster" src="{{ anime.image }}" alt="anime_poster">
+                        </div>
+                        <p class="custom-paragraph">{{ anime.title }}</p>
+                    </a>
+                    {% if session["user_id"] %}
+                    <button class="btn_favorite" onclick="toggleFavorite(event, {{ anime.id }}, {{ session['user_id'] }})">
+                        <img src="{% if anime.is_favorite %}/static/white-heart.png{% else %}/static/heart_favor.png{% endif %}" alt="Favorite">
+                    </button>
+                    {% endif %}
+              </div>
+            {% endfor %}
+    </div>
+{% endblock %}
+

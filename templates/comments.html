@@ -1,0 +1,10 @@
+{% for comment in comments %}
+    <li id="comment-{{ comment.id }}">
+        <p class="info_p">User: <strong>{{ comment.username }}</strong></p>
+        <p class="info_p">{{ comment.comment }}</p>
+        <p class="info_p">Date: {{ comment.timestamp }}</p>
+        {% if comment.username == session["username"] %}
+            <button onclick="deleteComment({{ comment.id }}, {{ comment.anime_id }})">Delete Comment</button>
+        {% endif %}
+    </li>
+{% endfor %}

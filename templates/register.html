@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="login_box">
+        <form action="/register" method="POST">
+            <div class="input_box">
+                <input id="username" name="username" type="text" required>
+                <label>Username</label>
+            </div>
+            <div class="input_box">
+                <input id="password" name="password" type="password" required>
+                <label>Password</label>
+            </div>
+            <div class="input_box">
+                <input id="confirmation" name="confirmation" type="password" required>
+                <label>Confirm Password</label>
+            </div>
+            <div class="submit_button">
+                <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+            <div class="register_link">
+                <p>Already have an account?
+                    <a class="reg_link" href="/login">LOG IN</a>
+                </p>
+            </div>
+        </form>
+    </div>
+{% endblock %}
